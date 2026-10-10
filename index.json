@@ -1,0 +1,35 @@
+{
+  "$schema": "./schema/index.schema.json",
+  "repo": "app-skills",
+  "updated": "2026-10-10",
+  "apps": [
+    {
+      "id": "android-vivo-notes",
+      "name": "原子笔记",
+      "package": "com.android.notes",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": ["notes", "productivity"],
+      "version_tested": "未验证",
+      "verified": "2026-10-10",
+      "status": "draft",
+      "risk": "low",
+      "author": "yuloong07-star",
+      "path": "skills/android-vivo-notes/SKILL.md"
+    },
+    {
+      "id": "android-vivo-calendar",
+      "name": "日历",
+      "package": "com.bbk.calendar",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": ["calendar", "schedule"],
+      "version_tested": "未验证",
+      "verified": "2026-10-10",
+      "status": "draft",
+      "risk": "low",
+      "author": "yuloong07-star",
+      "path": "skills/android-vivo-calendar/SKILL.md"
+    }
+  ]
+}

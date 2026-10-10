@@ -1,0 +1,24 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: 校验 SKILL.md 与 index.json
+        run: node tools/validate.mjs
+      - name: 检查隐私泄露与危险步骤标记
+        run: |
+          if grep -rInE '\bghp_[A-Za-z0-9]{20,}\b|sk-[A-Za-z0-9]{16,}|\b1[3-9][0-9]{9}\b' skills/ ; then
+            echo "::error::检测到疑似真实手机号或令牌，请脱敏"
+            exit 1
+          fi
+        continue-on-error: false

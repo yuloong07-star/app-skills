@@ -1,0 +1,40 @@
+name: 请求收录应用 / Request an app
+description: 想让某个应用有 Skill，或想认领写一个
+title: "[request] 应用名"
+labels: ["request"]
+body:
+  - type: input
+    id: app
+    attributes:
+      label: 应用名称
+      description: 常见叫法即可，比如「美团外卖」
+    validations:
+      required: true
+  - type: input
+    id: package
+    attributes:
+      label: 包名 / Bundle ID（若知道）
+      placeholder: com.sankuai.meituan.takeoutnew
+    validations:
+      required: false
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台
+      options: [android, ios, harmony, web, other]
+    validations:
+      required: true
+  - type: textarea
+    id: flows
+    attributes:
+      label: 你希望 Agent 能用它做什么
+      placeholder: |
+        例：搜索商品 → 加购 → 用券 → 提交订单（提交前必须我确认）
+    validations:
+      required: true
+  - type: checkboxes
+    id: claim
+    attributes:
+      label: 是否愿意自己写
+      options:
+        - label: 我愿意按 CONTRIBUTING.md 提交这份技能

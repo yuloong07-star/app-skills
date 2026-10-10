@@ -1,0 +1,32 @@
+name: 技能失效了 / Report a broken skill
+description: 某个应用改版后 SKILL.md 走不通了
+title: "[broken] app-id"
+labels: ["broken"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: 哪个技能
+      placeholder: android-vivo-notes
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 你的应用版本 / 系统版本
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: 卡在哪一步
+      description: 复制 SKILL.md 里的那一步，并说明屏幕上实际是什么
+    validations:
+      required: true
+  - type: textarea
+    id: hint
+    attributes:
+      label: 你找到的新路径（如果有）
+      description: 有的话很欢迎，可以直接提 PR
+    validations:
+      required: false
