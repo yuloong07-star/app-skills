@@ -1,7 +1,7 @@
 {
   "$schema": "./schema/index.schema.json",
   "repo": "app-skills",
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "apps": [
     {
       "id": "android-vivo-notes",
@@ -9,11 +9,14 @@
       "package": "com.android.notes",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["notes", "productivity"],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "tags": [
+        "notes",
+        "productivity"
+      ],
+      "version_tested": "5.4.5.107（vivo V2417A / Android 16）",
+      "verified": "2026-10-11",
       "status": "verified",
-      "risk": "low",
+      "risk": "medium",
       "author": "yuloong07-star",
       "path": "skills/android-vivo-notes/SKILL.md"
     },
@@ -23,11 +26,14 @@
       "package": "com.bbk.calendar",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["calendar", "schedule"],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "tags": [
+        "calendar",
+        "schedule"
+      ],
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
       "status": "verified",
-      "risk": "low",
+      "risk": "medium",
       "author": "yuloong07-star",
       "path": "skills/android-vivo-calendar/SKILL.md"
     },
@@ -37,9 +43,12 @@
       "package": "com.android.BBKClock",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["clock", "alarm"],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "tags": [
+        "clock",
+        "alarm"
+      ],
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
       "status": "verified",
       "risk": "medium",
       "author": "yuloong07-star",
@@ -51,9 +60,12 @@
       "package": "com.vivo.gallery",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["gallery", "photos"],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "tags": [
+        "gallery",
+        "photos"
+      ],
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
       "status": "verified",
       "risk": "medium",
       "author": "yuloong07-star",
@@ -65,9 +77,12 @@
       "package": "com.vivo.ai.copilot",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["assistant", "ai"],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "tags": [
+        "assistant",
+        "ai"
+      ],
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
       "status": "verified",
       "risk": "medium",
       "author": "yuloong07-star",
@@ -79,9 +94,12 @@
       "package": "com.android.settings",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["system", "settings"],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "tags": [
+        "system",
+        "settings"
+      ],
+      "version_tested": "Android 16（vivo V2417A）",
+      "verified": "2026-10-11",
       "status": "verified",
       "risk": "medium",
       "author": "yuloong07-star",
@@ -93,9 +111,12 @@
       "package": "com.android.camera",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["camera", "photo"],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "tags": [
+        "camera",
+        "photo"
+      ],
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
       "status": "verified",
       "risk": "low",
       "author": "yuloong07-star",
@@ -107,7 +128,10 @@
       "package": "com.vivo.weather",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["weather", "life"],
+      "tags": [
+        "weather",
+        "life"
+      ],
       "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
       "verified": "2026-10-10",
       "status": "verified",
@@ -121,7 +145,10 @@
       "package": "com.android.bbkcalculator",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["tools", "calculator"],
+      "tags": [
+        "tools",
+        "calculator"
+      ],
       "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
       "verified": "2026-10-10",
       "status": "verified",
@@ -135,7 +162,10 @@
       "package": "com.android.bbksoundrecorder",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["tools", "recorder"],
+      "tags": [
+        "tools",
+        "recorder"
+      ],
       "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
       "verified": "2026-10-10",
       "status": "verified",
@@ -149,9 +179,12 @@
       "package": "com.android.filemanager",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["files", "tools"],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "tags": [
+        "files",
+        "tools"
+      ],
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
       "status": "verified",
       "risk": "medium",
       "author": "yuloong07-star",
@@ -163,7 +196,10 @@
       "package": "com.android.contacts",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["phone", "contacts"],
+      "tags": [
+        "phone",
+        "contacts"
+      ],
       "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
       "verified": "2026-10-10",
       "status": "verified",
@@ -177,7 +213,9 @@
       "package": "com.bbk.appstore",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["appstore"],
+      "tags": [
+        "appstore"
+      ],
       "version_tested": "未记录",
       "verified": "未验证",
       "status": "draft",
@@ -191,7 +229,10 @@
       "package": "com.iqoo.secure",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["security", "cleanup"],
+      "tags": [
+        "security",
+        "cleanup"
+      ],
       "version_tested": "未记录",
       "verified": "未验证",
       "status": "draft",
@@ -205,7 +246,10 @@
       "package": "com.bbk.theme",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["theme", "wallpaper"],
+      "tags": [
+        "theme",
+        "wallpaper"
+      ],
       "version_tested": "未记录",
       "verified": "未验证",
       "status": "draft",
@@ -219,7 +263,10 @@
       "package": "com.android.bbkmusic",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["music", "media"],
+      "tags": [
+        "music",
+        "media"
+      ],
       "version_tested": "未记录",
       "verified": "未验证",
       "status": "draft",
@@ -233,7 +280,10 @@
       "package": "com.android.VideoPlayer",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["video", "media"],
+      "tags": [
+        "video",
+        "media"
+      ],
       "version_tested": "未记录",
       "verified": "未验证",
       "status": "draft",
@@ -247,7 +297,10 @@
       "package": "com.vivo.vtouch",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["scan", "qr"],
+      "tags": [
+        "scan",
+        "qr"
+      ],
       "version_tested": "未记录",
       "verified": "未验证",
       "status": "draft",
@@ -261,7 +314,10 @@
       "package": "com.vivo.translator",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["translate", "tools"],
+      "tags": [
+        "translate",
+        "tools"
+      ],
       "version_tested": "未记录",
       "verified": "未验证",
       "status": "draft",
@@ -275,7 +331,10 @@
       "package": "com.vivo.wallet",
       "platform": "android",
       "vendor": "vivo",
-      "tags": ["wallet", "nfc"],
+      "tags": [
+        "wallet",
+        "nfc"
+      ],
       "version_tested": "未记录",
       "verified": "未验证",
       "status": "draft",
