@@ -1,6 +1,6 @@
 ---
 name: android-vivo-calendar
-description: 在 vivo 日历（com.bbk.calendar）里新建日程、搜索/修改已有日程、查看某天安排时使用。典型场景：把课表或会议写进日历、查询某天日程、补建一次性提醒。触发词：加日程、写进日历、安排提醒、查日历、明天有什么安排。
+description: 在 vivo 日历（com.bbk.calendar）里新建日程、搜索/修改已有日程、查看某天安排时使用。典型场景：把课表或会议写进日历、查询某天日程、补建一次性提醒。触发词：加日程、写进日历、安排提醒、查日历、明天有什么安排。 不适用：把教务课表批量同步进日历课程表（用 campus-schedule-sync）；结合课表与天气排一天行程（用 weather-trip-planning）。
 app:
   name: 日历
   package: com.bbk.calendar
@@ -19,6 +19,12 @@ danger_steps: []
 
 两个核心发现：**标题框支持自然语言**（占位符就是「试着输入"明晚 7 点聚餐"」），
 时间字段是**滚轮**（点按无效、只能拖动，改完等 1 秒再读）。
+
+## 什么时候不要用我
+
+- 批量导入/更新课程表 → 用 campus-schedule-sync 技能
+- 要按当天天气与课程空档排一整天的行程 → 用 weather-trip-planning 技能
+- 删除已有日程 → 属危险动作，不在本技能的自动流程内
 
 ## 前提
 
