@@ -1,0 +1,65 @@
+---
+name: android-vivo-calculator
+description: 在 vivo 计算器（com.android.bbkcalculator）里做四则运算、读计算结果、算汇率或翻历史记录时使用。典型场景：帮我算一笔账、这个折扣多少钱、汇率换算。触发词：计算器、算一下、等于多少、汇率。
+app:
+  name: 计算器
+  package: com.android.bbkcalculator
+  platform: android
+  version_tested: "未记录（vivo V2417A / Android 16 ROM）"
+  verified: "2026-10-10"
+tools_used: [ui_tree, screenshot, ocr, tap_by_text]
+risk: low
+danger_steps: []
+---
+
+## 概览
+
+按键全部可按名点（实测 1+2 链路命中 digit_1/op_add/digit_2/eq 全部成功），
+**但公式与结果的数值不进控件树，必须 OCR 读**。这是本技能的核心坑。
+
+- **适合**：四则运算、百分比、汇率 tab 换算、读历史。
+
+## 入口
+
+- 包名 `com.android.bbkcalculator`，组件 `.Calculator`。
+- 结构（实测）：顶部 tab「计算」/「汇率」（desc 可点，汇率是独立换算页）；按钮 desc=`以小窗口显示`、desc=`设置`；
+  输入区 `formula`（表达式 EditText）与 `result`（结果 EditText）——**两者值不出现在控件树**；
+  辅助键 desc=`打开历史记录`（`history_toge_button`）、desc=`科学计算器`（`calculator_mode_toge_button`）。
+
+## 按键表（按名点，实测精确命中）
+
+| 键 | 定位方式 | 键 | 定位方式 |
+| --- | --- | --- | --- |
+| 0-9 | 文本 `0`…`9`（id=digit_N） | 小数点 | 文本 `.` |
+| + − × ÷ | 文本 `+`/`−`/`×`/`÷`（id=op_add 等） | 等号 | 文本 `=`（id=eq） |
+| % | 文本 `%` | AC 清除 | 文本 `AC`（id=clr） |
+| ⌫ 退格 | 文本 `⌫` | +/- | 文本 `+/-` |
+| mc/m+/m-/mr | 文本同名（内存键） | | |
+
+## 流程：算一笔并读结果
+
+1. 打开计算器 → **先点 `AC`**（页面可能残留上次内容）。
+2. 按算式顺序逐键点按：如 `1` `+` `2` `=`。
+   - 判据：每次点按后无需回读，最后统一验证。
+3. **OCR 读 `result` 区**（树里没有值，`lw_ocr` 即可）。
+4. 把 OCR 读到的数字与自己心算的预期比对——一致才答复，不一致重来一遍。
+
+## 流程：汇率换算
+
+1. 顶部 tab 点「汇率」→ 进入汇率页（结构同为输入+结果，OCR 读数）。
+2. 换算后 OCR 验证，注意汇率数据的时效（页面会标更新时间）。
+
+## 已知坑
+
+- **结果必须 OCR**：控件树的 `formula`/`result` 只有矩形没有文本，只读树会「看不到答案」。
+- **残留内容**：上次的算式会留在 `formula`，不清零直接按会拼进旧式（实测曾把 1+2 接在 12,341 后面）。**第一步永远是 AC**。
+- **键文本歧义**：树里有多个含"2"的文本时（如历史里的数字），按 id 精确匹配或先截屏确认页面无干扰。
+- **千分位**：结果大于三位数时带逗号（如 12,343），转述时注意别误读成小数。
+
+## 验证
+
+- OCR 结果与心算/独立计算一致才答复用户；不一致先怀疑残留内容，AC 后重算。
+
+## 工具映射（可选）
+
+DeepSeek Harness（LittleWhale）：`lw_tap text="AC"`、逐键 `lw_tap text="1"` 等、`lw_ocr` 读结果。

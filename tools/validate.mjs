@@ -53,7 +53,7 @@ function parseFrontmatter(text, file) {
 }
 
 const PLATFORMS = ['android', 'ios', 'harmony', 'web', 'other'];
-const NEUTRAL_TOOLS = ['ui_tree', 'screenshot', 'ocr', 'tap_by_text', 'tap_coord', 'type', 'swipe',
+const NEUTRAL_TOOLS = ['ui_tree', 'screenshot', 'ocr', 'tap_by_text', 'tap_coord', 'type', 'swipe', 'scroll',
   'system_key', 'launch_app', 'clipboard', 'notification', 'file_io'];
 
 const dirs = existsSync(SKILLS) ? readdirSync(SKILLS).filter((d) => {
@@ -80,7 +80,8 @@ for (const d of dirs) {
       if (!app[k]) err(`${file}: 缺少 app.${k}`);
     }
     if (app.platform && !PLATFORMS.includes(app.platform)) err(`${file}: app.platform "${app.platform}" 不在 ${PLATFORMS.join('/')}`);
-    if (app.verified && !/^\d{4}-\d{2}-\d{2}$/.test(app.verified)) err(`${file}: app.verified 应为 YYYY-MM-DD`);
+    if (app.verified && app.verified !== '未验证' && !/^\d{4}-\d{2}-\d{2}$/.test(app.verified)) err(`${file}: app.verified 应为 YYYY-MM-DD 或「未验证」（骨架未走查时）`);
+    if (app.verified === '未验证' && fm.risk === 'high') warn(`${file}: 未验证的技能标了 high 风险，骨架期先只写不执行`);
   }
   if (!['low', 'medium', 'high'].includes(fm.risk || 'low')) err(`${file}: risk 应为 low/medium/high`);
   for (const t of fm.tools_used || []) if (!NEUTRAL_TOOLS.includes(t)) warn(`${file}: tools_used 里的 "${t}" 不是推荐的中性词`);

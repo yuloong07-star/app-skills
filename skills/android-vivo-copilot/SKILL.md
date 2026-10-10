@@ -1,0 +1,65 @@
+---
+name: android-vivo-copilot
+description: 用蓝心小V（com.vivo.ai.copilot）以文字下系统指令、问手机操作问题或让它代执行设置类任务时使用。典型场景：设置闹钟/开热点/调亮度这类系统设置交给他办、问「怎么清后台」。触发词：蓝心小V、问小V、让小V设闹钟、系统助手。
+app:
+  name: 蓝心小V
+  package: com.vivo.ai.copilot
+  platform: android
+  version_tested: "未记录（vivo V2417A / Android 16 ROM）"
+  verified: "2026-10-10"
+tools_used: [ui_tree, screenshot, ocr, tap_by_text, tap_coord, type]
+risk: medium
+danger_steps: ["让小V代执行系统设置变更"]
+---
+
+## 概览
+
+蓝心小V 是 vivo 的系统 AI 助手，**能用文字直接下系统指令**（实测「设置明天早上6点40的闹钟」直接生成并开启）。
+把它当作「设置类任务的文字通道」：Agent 不用自己翻设置页，把需求写成一句话交给小V。
+
+- **适合**：系统设置类代办（闹钟、提醒、开关）、问操作方法、翻译/拍题等内置能力。
+- **不适合**：涉及账号、支付、隐私授权的指令（须用户亲自操作）。
+
+## 前提
+
+- 无障碍权限已授予；小V已开启可用。
+- **聊天主体是 WebView，回答内容控件树读不到**，看回答必须截图+OCR。
+
+## 入口
+
+- 包名 `com.vivo.ai.copilot`；启动组件 `.transfer.EmptyLauncherActivity` → 自动转 `.business.home.HomeActivity`。
+- 首页结构（实测）：标题「蓝心小V」+ desc=`更多`；上方快捷推荐 `recommend_recycler_view`（智能思考 `btn_deep_seek`、打给小V、拍题解题、翻译，均含文字可按名点）；底部输入区 `et_chat_input`（**占位「点击输入或按住说话」**）、`iv_chat_more`（更多）、语音键 `voice_ball_image_view_`。
+- 发送键 `iv_chat_send`：输入内容后才出现，控件树无 desc 时按坐标点（输入框右侧）。
+
+## 流程：让小V执行一条系统指令
+
+1. 启动小V → 判据：标题「蓝心小V」，底部出现 `et_chat_input`。
+2. 点 `et_chat_input`，写入完整的一句话指令（写清对象与数值，例如「设置明天早上6点40的闹钟」）。
+3. 点发送（`iv_chat_send`，无 desc 时坐标点；点后回读树确认输入框已清空）。
+4. 等 2-5 秒，**截图+OCR 读回答**（WebView 无控件树）。
+5. 若回答说已执行，去对应应用交叉验证（如打开时钟看闹钟是否真的出现）——**小V说做了不等于真做了，以目标应用回读为准**。
+
+## 流程：只提问不执行
+
+同上 1-3 步，第 5 步直接把 OCR 读到的回答原样转述，不加戏。
+
+## 已知坑
+
+- **回答不可读树**：必须截图；文字多时截全屏或分帧读。
+- **发送键坐标**：`iv_chat_send` 常无描述，坐标点按后要回读输入框是否清空来确认发送成功。
+- **执行结果要落地验证**：小V 的回复是「声称」，去时钟/设置里回读才是证据。
+- **首页主体是 HorizontalScrollView+WebView**：树里只有输入区和快捷键，正文区为空是正常现象。
+
+## 验证
+
+- 执行类：目标应用回读到新条目（如时钟里出现 06:40 闹钟）。
+- 问答类：截图读出的回答与转述一致。
+
+## 危险步骤
+
+> ⚠️ **危险**：小V 可能代为改动系统设置（网络、声音、账户）。
+> 涉及断网、账户、隐私类指令，先把要发的原话给用户过目再发送。
+
+## 工具映射（可选）
+
+DeepSeek Harness（LittleWhale）：`lw_tap text="点击输入或按住说话"` 或坐标点输入框、`lw_type` 写中文、坐标点发送、`lw_screenshot`+`read_image` 读回答。
