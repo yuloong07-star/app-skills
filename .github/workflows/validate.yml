@@ -15,6 +15,8 @@ jobs:
           node-version: '20'
       - name: 校验 SKILL.md 与 index.json
         run: node tools/validate.mjs
+      - name: 索引与技能目录对账（体积、sha256、status 自洽）
+        run: node tools/app-skills-index.mjs check
       - name: 检查隐私泄露与危险步骤标记
         run: |
           if grep -rInE '\bghp_[A-Za-z0-9]{20,}\b|sk-[A-Za-z0-9]{16,}|\b1[3-9][0-9]{9}\b' skills/ ; then

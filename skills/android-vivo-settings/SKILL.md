@@ -5,8 +5,12 @@ app:
   name: 设置
   package: com.android.settings
   platform: android
+  vendor: vivo
   version_tested: "Android 16（vivo V2417A）"
   verified: "2026-10-11"
+tags: [system, settings]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, tap_by_text, tap_coord, type, swipe, system_key, launch_app]
 risk: medium
 danger_steps: ["恢复出厂/清除数据", "卸载或停用应用", "改锁屏密码与指纹、账户解绑", "空间清理"]

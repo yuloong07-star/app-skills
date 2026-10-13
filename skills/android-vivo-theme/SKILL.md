@@ -5,8 +5,12 @@ app:
   name: 主题
   package: com.bbk.theme
   platform: android
+  vendor: vivo
   version_tested: "未记录"
   verified: "未验证"
+tags: [theme, wallpaper]
+status: draft
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr]
 risk: low
 danger_steps: ["付费主题购买"]

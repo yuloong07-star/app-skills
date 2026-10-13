@@ -6,9 +6,13 @@
 git clone https://github.com/yuloong07-star/app-skills
 cd app-skills
 cp -r skills/_template skills/android-你的应用
-# 填 SKILL.md，把新条目加进 index.json
+# 填 SKILL.md（frontmatter 里 tags/status/author 等字段见 schema/skill.frontmatter.md）
 node tools/validate.mjs
+node tools/app-skills-index.mjs build   # index.json 是生成物，不要手改这一份
 ```
+
+`index.json` 由 `tools/app-skills-index.mjs` 从 SKILL.md 现算，体积、sha256、取用地址都在里面；
+CI 会跑 `check` 核对，索引没重生成就会红。
 
 ## 技能必须回答的五个问题
 
@@ -51,8 +55,8 @@ docs: 规范补充危险步骤写法
 
 ## 评审看什么
 
-1. `node tools/validate.mjs` 是否通过；
-2. `index.json` 是否和目录同步；
+1. `node tools/validate.mjs` 与 `node tools/app-skills-index.mjs check` 是否通过；
+2. `index.json` 是否和目录同步（改过 SKILL.md 就要重新 build）；
 3. 步骤是否可执行、判据是否明确；
 4. 有没有把没验证的东西写成已验证。
 

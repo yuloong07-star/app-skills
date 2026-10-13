@@ -5,8 +5,12 @@ app:
   name: 相机
   package: com.android.camera
   platform: android
+  vendor: vivo
   version_tested: "vivo V2417A / Android 16"
   verified: "2026-10-11"
+tags: [camera, photo]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr, tap_by_text, tap_coord, swipe, system_key, launch_app]
 risk: low
 danger_steps: []

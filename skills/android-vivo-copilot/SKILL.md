@@ -5,8 +5,12 @@ app:
   name: 蓝心小V
   package: com.vivo.ai.copilot
   platform: android
+  vendor: vivo
   version_tested: "vivo V2417A / Android 16"
   verified: "2026-10-11"
+tags: [assistant, ai]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr, tap_by_text, tap_coord, type, system_key, launch_app]
 risk: medium
 danger_steps: ["让小V代执行系统设置变更", "代发账号与支付类指令"]

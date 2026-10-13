@@ -5,8 +5,12 @@ app:
   name: 扫描
   package: com.vivo.vtouch
   platform: android
+  vendor: vivo
   version_tested: "未记录"
   verified: "未验证"
+tags: [scan, qr]
+status: draft
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr]
 risk: medium
 danger_steps: ["扫码后跳转的支付/授权确认"]

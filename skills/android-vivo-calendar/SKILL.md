@@ -5,8 +5,12 @@ app:
   name: 日历
   package: com.bbk.calendar
   platform: android
+  vendor: vivo
   version_tested: "vivo V2417A / Android 16"
   verified: "2026-10-11"
+tags: [calendar, schedule]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, tap_by_text, tap_coord, type, swipe, system_key, launch_app]
 risk: medium
 danger_steps: ["删除日程", "修改主人已有的日程", "日程导入与管理"]

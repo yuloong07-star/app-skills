@@ -5,8 +5,12 @@ app:
   name: 文件管理
   package: com.android.filemanager
   platform: android
+  vendor: vivo
   version_tested: "vivo V2417A / Android 16"
   verified: "2026-10-11"
+tags: [files, tools]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, tap_by_text, tap_coord, type, swipe, system_key, launch_app]
 risk: medium
 danger_steps: ["删除文件", "清空最近删除", "空间清理"]

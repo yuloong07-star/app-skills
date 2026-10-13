@@ -5,8 +5,12 @@ app:
   name: 计算器
   package: com.android.bbkcalculator
   platform: android
+  vendor: vivo
   version_tested: "未记录（vivo V2417A / Android 16 ROM）"
   verified: "2026-10-10"
+tags: [tools, calculator]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr, tap_by_text]
 risk: low
 danger_steps: []

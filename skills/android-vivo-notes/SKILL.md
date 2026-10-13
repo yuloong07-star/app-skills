@@ -5,8 +5,12 @@ app:
   name: 原子笔记
   package: com.android.notes
   platform: android
+  vendor: vivo
   version_tested: "5.4.5.107（vivo V2417A / Android 16）"
   verified: "2026-10-11"
+tags: [notes, productivity]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr, tap_by_text, tap_coord, type, swipe, system_key, launch_app]
 risk: medium
 danger_steps: ["删除笔记/待办/文档", "清空最近删除", "移入原子隐私系统", "加锁"]

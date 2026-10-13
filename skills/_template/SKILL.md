@@ -5,8 +5,12 @@ app:
   name: 应用中文名
   package: com.example.app
   platform: android
+  vendor: 出品方           # 如 vivo / 字节 / 独立
   version_tested: "未验证"
-  verified: "2026-01-01"
+  verified: "未验证"        # 没真的走查过就写「未验证」，status 跟着只能是 draft
+tags: [分类, 用途]          # 小写英文词，检索用；两三个就够
+status: draft               # verified 已跑通 / draft 骨架 / broken 改版失效
+author: 你的 GitHub 用户名
 tools_used: [ui_tree, screenshot, tap_by_text, type]
 risk: low
 danger_steps: []

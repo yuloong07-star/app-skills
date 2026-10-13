@@ -5,8 +5,12 @@ app:
   name: 闹钟时钟
   package: com.android.BBKClock
   platform: android
+  vendor: vivo
   version_tested: "vivo V2417A / Android 16"
   verified: "2026-10-11"
+tags: [clock, alarm]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, tap_by_text, tap_coord, type, swipe, system_key, launch_app]
 risk: medium
 danger_steps: ["关闭/删除主人的闹钟", "修改既有闹钟时间", "启用起床闹钟"]

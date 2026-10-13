@@ -5,8 +5,12 @@ app:
   name: 相册
   package: com.vivo.gallery
   platform: android
+  vendor: vivo
   version_tested: "vivo V2417A / Android 16"
   verified: "2026-10-11"
+tags: [gallery, photos]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr, tap_by_text, tap_coord, swipe, scroll, launch_app]
 risk: medium
 danger_steps: ["删除照片/视频", "清空最近删除", "清理建议"]

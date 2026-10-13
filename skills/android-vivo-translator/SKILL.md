@@ -5,8 +5,12 @@ app:
   name: 翻译机
   package: com.vivo.translator
   platform: android
+  vendor: vivo
   version_tested: "未记录"
   verified: "未验证"
+tags: [translate, tools]
+status: draft
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr]
 risk: low
 danger_steps: []

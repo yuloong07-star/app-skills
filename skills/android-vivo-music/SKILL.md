@@ -5,8 +5,12 @@ app:
   name: 音乐
   package: com.android.bbkmusic
   platform: android
+  vendor: vivo
   version_tested: "未记录"
   verified: "未验证"
+tags: [music, media]
+status: draft
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr]
 risk: low
 danger_steps: ["付费/会员开通"]

@@ -5,8 +5,12 @@ app:
   name: 手机管家
   package: com.iqoo.secure
   platform: android
+  vendor: vivo
   version_tested: "未记录"
   verified: "未验证"
+tags: [security, cleanup]
+status: draft
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr]
 risk: high
 danger_steps: ["一键清理", "卸载应用", "限制后台"]

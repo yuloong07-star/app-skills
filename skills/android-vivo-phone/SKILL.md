@@ -5,8 +5,12 @@ app:
   name: 电话与联系人
   package: com.android.contacts
   platform: android
+  vendor: vivo
   version_tested: "未记录（vivo V2417A / Android 16 ROM）"
   verified: "2026-10-10"
+tags: [phone, contacts]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, tap_by_text, tap_coord, type]
 risk: high
 danger_steps: ["拨号呼出", "删除通话记录", "删除联系人"]

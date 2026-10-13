@@ -5,8 +5,12 @@ app:
   name: 钱包
   package: com.vivo.wallet
   platform: android
+  vendor: vivo
   version_tested: "未记录"
   verified: "未验证"
+tags: [wallet, nfc]
+status: draft
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr]
 risk: high
 danger_steps: ["充值", "开通新卡", "绑定银行卡"]

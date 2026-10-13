@@ -5,8 +5,12 @@ app:
   name: 天气
   package: com.vivo.weather
   platform: android
+  vendor: vivo
   version_tested: "未记录（vivo V2417A / Android 16 ROM）"
   verified: "2026-10-10"
+tags: [weather, life]
+status: verified
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, swipe]
 risk: low
 danger_steps: []

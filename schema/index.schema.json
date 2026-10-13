@@ -1,33 +1,52 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "app-skills index",
+  "description": "本仓库的机器索引。由 tools/app-skills-index.mjs 从 skills/*/SKILL.md 现算生成，不要手改；要改内容就改 SKILL.md 再 build。",
   "type": "object",
-  "required": ["repo", "apps"],
+  "required": ["format", "repo", "apps"],
   "properties": {
+    "format": { "const": "app-skills-index/1", "description": "索引协议版本" },
     "repo": { "type": "string" },
-    "updated": { "type": "string", "description": "YYYY-MM-DD" },
+    "generated": { "type": "string", "description": "生成时刻（每次 build 都变，对账时忽略）" },
+    "updated": { "type": ["string", "null"], "description": "所有实测日期里最新的那一天，算出来的，不是今天" },
+    "source": { "type": "string", "description": "仓库地址" },
+    "index_url": { "type": "string", "description": "这份索引自己的 jsDelivr 地址（钉在内容 tag 上）" },
+    "index_mirrors": { "type": "array", "items": { "type": "string" }, "description": "同一份索引的其它 jsDelivr 镜像域" },
+    "note": { "type": "string", "description": "取用须知（每次 build 都变，对账时忽略）" },
     "apps": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name", "package", "platform", "path", "status"],
+        "required": ["id", "name", "package", "platform", "vendor", "tags", "status", "risk", "author", "path", "url", "sha256", "size"],
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
-          "name": { "type": "string" },
+          "name": { "type": "string", "description": "应用的中文名（人看的）" },
           "package": { "type": "string" },
           "platform": { "enum": ["android", "ios", "harmony", "web", "other"] },
           "vendor": { "type": "string" },
           "tags": { "type": "array", "items": { "type": "string" } },
           "version_tested": { "type": "string" },
-          "verified": { "type": "string" },
-          "status": { "enum": ["verified", "draft", "broken"] },
+          "verified": { "type": "string", "description": "YYYY-MM-DD 或「未验证」" },
+          "status": { "enum": ["verified", "draft", "broken"], "description": "verified 才建议常驻加载" },
           "risk": { "enum": ["low", "medium", "high"] },
           "author": { "type": "string" },
-          "path": { "type": "string" }
+          "description": { "type": "string", "description": "SKILL.md 里那句触发场景，取用方靠它决定要不要拉这份技能" },
+          "tools_used": { "type": "array", "items": { "type": "string" } },
+          "danger_steps": { "type": "array", "items": { "type": "string" } },
+          "path": { "type": "string", "description": "仓库内路径，如 skills/<id>/SKILL.md" },
+          "url": { "type": "string", "description": "取这份 SKILL.md 的地址（钉在内容 tag 上）" },
+          "mirrors": { "type": "array", "items": { "type": "string" } },
+          "sha256": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$", "description": "那一份 SKILL.md 的摘要，带 sha256: 前缀" },
+          "size": { "type": "integer", "description": "字节数" }
         },
-        "additionalProperties": true
+        "additionalProperties": false
       }
+    },
+    "deprecated": {
+      "type": "array",
+      "description": "手写的作废表（哪个 app-id 别用了、该换哪一份）。生成器不覆盖这一项。",
+      "items": { "type": "object", "additionalProperties": true }
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }

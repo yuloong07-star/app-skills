@@ -5,8 +5,12 @@ app:
   name: 应用商店
   package: com.bbk.appstore
   platform: android
+  vendor: vivo
   version_tested: "未记录"
   verified: "未验证"
+tags: [appstore]
+status: draft
+author: yuloong07-star
 tools_used: [ui_tree, screenshot, ocr]
 risk: medium
 danger_steps: ["下载与安装应用", "卸载应用"]

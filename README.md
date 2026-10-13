@@ -16,32 +16,72 @@
 一份好的 App Skill 不是"教程"，而是**给机器执行的路线图**：控件用文本/id 描述而不是固定像素坐标，
 每一步都带"怎么确认这步成功了"，危险动作（付款、删除、发布）单独标出来。
 
+## 索引仓库：抓一个地址就能用
+
+本仓库同时是一份**索引仓库**：根目录的 `index.json` 是那份机器索引，里面每个字段都是从
+`skills/*/SKILL.md` 现算出来的（体积、sha256、标签、状态、取用地址），所以别人不用 clone、
+不用翻目录也能取用：
+
+1. 抓索引。地址钉在**内容 tag** `index-1` 上，不随 `main` 改动，取回来就能对上：
+
+   ```
+   https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/index.json
+   ```
+
+   同一个文件另有三处等价的 jsDelivr 域，通不了就换开头的主机名：
+   `fastly.jsdelivr.net` / `gcore.jsdelivr.net` / `testingcf.jsdelivr.net`。
+
+2. 在 `apps` 里挑。`status: verified` 才建议放进常驻技能目录，`draft` 是骨架、留在冷存储；
+   `risk: high` 的流程含付款/删除/发布这类不可逆动作，先看它的 `danger_steps`。
+   挑的时候看 `package`、`tags`、`description` 就够，不必先读全文。
+
+3. 按那一条的 `url` 取 `SKILL.md`，放进你的技能目录（DeepSeek Harness 是 `$DSH_HOME/skills/<id>/`，
+   Claude Code 是 `~/.claude/skills/<id>/`）。取回来用 `sha256` 与 `size` 对一下，就知道有没有取岔。
+
+4. `deprecated` 里点名的 app-id 别再用，照它写的换一份。
+
+索引是生成物，不是手写文件：
+
+```bash
+node tools/app-skills-index.mjs build     # 从 skills/ 重新生成 index.json
+node tools/app-skills-index.mjs check     # 索引与技能目录对账（CI 跑的是这一条）
+```
+
+**tag 钉的是内容**：改了任何一份 SKILL.md，就要换一个 tag（`--ref index-2`）再 build ——
+否则别人手里的 sha256 与他按旧地址取回的内容对不上。
+
 ## 目录结构
 
 ```
 .
 ├── skills/<app-id>/SKILL.md      # 一个应用一份技能（Agent 读这个）
 ├── skills/<app-id>/examples/     # 可选：录制/整理的控件树、OCR 片段、截图说明
-├── index.json                    # 机器可读索引：app-id / 包名 / 平台 / 标签 / 状态
-├── schema/skill.schema.json      # SKILL.md frontmatter 的校验规则
-└── tools/validate.mjs            # 本地校验：frontmatter + index.json 是否一致
+├── index.json                    # 机器索引（生成物，别手改）：包名/平台/标签/状态/体积/sha256/取用地址
+├── schema/index.schema.json      # index.json 的字段规范
+├── schema/skill.frontmatter.md   # SKILL.md frontmatter 的字段规范
+└── tools/
+    ├── validate.mjs              # 本地校验：frontmatter 写得对不对、index.json 与目录是否同步
+    ├── app-skills-index.mjs      # 索引生成与对账（build / check）
+    └── lib/frontmatter.mjs       # 上面两个工具共用的 frontmatter 解析（只此一份，免得两边解析出不同结果）
 ```
 
 `<app-id>` 用小写连字符，优先 `平台-应用名`：`android-vivo-notes`、`ios-bilibili`。
 
 ## 快速开始
 
-**用现成的**：把 `skills/` 下你要的目录拷进你 Agent 的技能目录。
+**用现成的**：抓上面那份 `index.json`，挑一条按 `url` 取 `SKILL.md`；也可以直接 clone 后把
+`skills/` 下你要的目录拷进你 Agent 的技能目录。
 DeepSeek Harness 是 `$DSH_HOME/skills/`，Claude Code 是 `~/.claude/skills/`，
 其它框架只要能加载 `SKILL.md`（YAML frontmatter + Markdown 正文）就能用。
 
 **写一份新的**：抄 [`skills/_template/SKILL.md`](skills/_template/SKILL.md)，
 改 frontmatter，按"定位方式 → 分步流程 → 已知坑 → 验证"的顺序填。
-写完跑一次校验：
+写完跑一次校验、再把索引重新生成：
 
 ```bash
-node tools/validate.mjs          # 检查全部
+node tools/validate.mjs                  # 检查全部
 node tools/validate.mjs --app android-vivo-notes
+node tools/app-skills-index.mjs build    # 改过内容就要重生成 index.json
 ```
 
 ## SKILL.md 长什么样
@@ -109,8 +149,8 @@ risk: low                          # low | medium | high（涉及支付/删除/�
 - 修 bug / 补坑：直接改对应 `SKILL.md`，在 PR 里写清"哪句错、凭什么"
 - 有疑问或想认领应用：提 [Issue](.github/ISSUE_TEMPLATE/app-skill-request.yml)
 
-PR 合并要求：`node tools/validate.mjs` 通过；`index.json` 与技能目录同步；
-`verified` 日期是你真的跑过的日期。
+PR 合并要求：`node tools/validate.mjs` 与 `node tools/app-skills-index.mjs check` 都通过；
+`index.json` 与技能目录同步；`verified` 日期是你真的跑过的日期。
 
 ## 收录状态
 

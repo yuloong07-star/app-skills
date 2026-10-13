@@ -1,143 +1,51 @@
 {
   "$schema": "./schema/index.schema.json",
+  "format": "app-skills-index/1",
   "repo": "app-skills",
+  "generated": "2026-10-13T15:59:30Z",
   "updated": "2026-10-11",
+  "source": "https://github.com/yuloong07-star/app-skills",
+  "index_url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/index.json",
+  "index_mirrors": [
+    "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/index.json",
+    "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/index.json",
+    "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/index.json"
+  ],
+  "note": "本文件由 tools/app-skills-index.mjs 生成：每条都是从 skills/<app-id>/SKILL.md 现算的（体积与 sha256 都是那一份文件的）。url 钉在内容 tag 上，内容一改就得换 tag 并重新 build。取用时先看 status：verified 才进常驻技能目录，draft 留冷存储。deprecated 是手写的作废表。",
   "apps": [
     {
-      "id": "android-vivo-notes",
-      "name": "原子笔记",
-      "package": "com.android.notes",
+      "id": "android-vivo-appstore",
+      "name": "应用商店",
+      "package": "com.bbk.appstore",
       "platform": "android",
       "vendor": "vivo",
       "tags": [
-        "notes",
-        "productivity"
+        "appstore"
       ],
-      "version_tested": "5.4.5.107（vivo V2417A / Android 16）",
-      "verified": "2026-10-11",
-      "status": "verified",
+      "version_tested": "未记录",
+      "verified": "未验证",
+      "status": "draft",
       "risk": "medium",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-notes/SKILL.md"
-    },
-    {
-      "id": "android-vivo-calendar",
-      "name": "日历",
-      "package": "com.bbk.calendar",
-      "platform": "android",
-      "vendor": "vivo",
-      "tags": [
-        "calendar",
-        "schedule"
+      "description": "在 vivo 应用商店（com.bbk.appstore）里搜索应用、查看更新、下载或管理已装应用时使用。触发词：应用商店、下载app、更新应用、装个软件。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr"
       ],
-      "version_tested": "vivo V2417A / Android 16",
-      "verified": "2026-10-11",
-      "status": "verified",
-      "risk": "medium",
-      "author": "yuloong07-star",
-      "path": "skills/android-vivo-calendar/SKILL.md"
-    },
-    {
-      "id": "android-vivo-clock",
-      "name": "闹钟时钟",
-      "package": "com.android.BBKClock",
-      "platform": "android",
-      "vendor": "vivo",
-      "tags": [
-        "clock",
-        "alarm"
+      "danger_steps": [
+        "下载与安装应用",
+        "卸载应用"
       ],
-      "version_tested": "vivo V2417A / Android 16",
-      "verified": "2026-10-11",
-      "status": "verified",
-      "risk": "medium",
-      "author": "yuloong07-star",
-      "path": "skills/android-vivo-clock/SKILL.md"
-    },
-    {
-      "id": "android-vivo-gallery",
-      "name": "相册",
-      "package": "com.vivo.gallery",
-      "platform": "android",
-      "vendor": "vivo",
-      "tags": [
-        "gallery",
-        "photos"
+      "path": "skills/android-vivo-appstore/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-appstore/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-appstore/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-appstore/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-appstore/SKILL.md"
       ],
-      "version_tested": "vivo V2417A / Android 16",
-      "verified": "2026-10-11",
-      "status": "verified",
-      "risk": "medium",
-      "author": "yuloong07-star",
-      "path": "skills/android-vivo-gallery/SKILL.md"
-    },
-    {
-      "id": "android-vivo-copilot",
-      "name": "蓝心小V",
-      "package": "com.vivo.ai.copilot",
-      "platform": "android",
-      "vendor": "vivo",
-      "tags": [
-        "assistant",
-        "ai"
-      ],
-      "version_tested": "vivo V2417A / Android 16",
-      "verified": "2026-10-11",
-      "status": "verified",
-      "risk": "medium",
-      "author": "yuloong07-star",
-      "path": "skills/android-vivo-copilot/SKILL.md"
-    },
-    {
-      "id": "android-vivo-settings",
-      "name": "设置",
-      "package": "com.android.settings",
-      "platform": "android",
-      "vendor": "vivo",
-      "tags": [
-        "system",
-        "settings"
-      ],
-      "version_tested": "Android 16（vivo V2417A）",
-      "verified": "2026-10-11",
-      "status": "verified",
-      "risk": "medium",
-      "author": "yuloong07-star",
-      "path": "skills/android-vivo-settings/SKILL.md"
-    },
-    {
-      "id": "android-vivo-camera",
-      "name": "相机",
-      "package": "com.android.camera",
-      "platform": "android",
-      "vendor": "vivo",
-      "tags": [
-        "camera",
-        "photo"
-      ],
-      "version_tested": "vivo V2417A / Android 16",
-      "verified": "2026-10-11",
-      "status": "verified",
-      "risk": "low",
-      "author": "yuloong07-star",
-      "path": "skills/android-vivo-camera/SKILL.md"
-    },
-    {
-      "id": "android-vivo-weather",
-      "name": "天气",
-      "package": "com.vivo.weather",
-      "platform": "android",
-      "vendor": "vivo",
-      "tags": [
-        "weather",
-        "life"
-      ],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
-      "status": "verified",
-      "risk": "low",
-      "author": "yuloong07-star",
-      "path": "skills/android-vivo-weather/SKILL.md"
+      "sha256": "sha256:cc621e78ed6787a8f940ccff14a88825c31c2d08f90f1bd3ac979e630d7282a0",
+      "size": 1321
     },
     {
       "id": "android-vivo-calculator",
@@ -154,24 +62,182 @@
       "status": "verified",
       "risk": "low",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-calculator/SKILL.md"
+      "description": "在 vivo 计算器（com.android.bbkcalculator）里做四则运算、读计算结果、算汇率或翻历史记录时使用。典型场景：帮我算一笔账、这个折扣多少钱、汇率换算。触发词：计算器、算一下、等于多少、汇率。 不适用：Agent 自己就能算的四则运算与百分比（口算/直接算出答案更快，开应用反而多一步且有读屏误差）；复杂科学计算。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr",
+        "tap_by_text"
+      ],
+      "danger_steps": [],
+      "path": "skills/android-vivo-calculator/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-calculator/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-calculator/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-calculator/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-calculator/SKILL.md"
+      ],
+      "sha256": "sha256:298915da35b390b21c9791f2c25994aa1345a26d87e45e43ee896179a5a5c9b0",
+      "size": 3831
     },
     {
-      "id": "android-vivo-recorder",
-      "name": "录音机",
-      "package": "com.android.bbksoundrecorder",
+      "id": "android-vivo-calendar",
+      "name": "日历",
+      "package": "com.bbk.calendar",
       "platform": "android",
       "vendor": "vivo",
       "tags": [
-        "tools",
-        "recorder"
+        "calendar",
+        "schedule"
       ],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
       "status": "verified",
       "risk": "medium",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-recorder/SKILL.md"
+      "description": "在 vivo 日历（com.bbk.calendar）里新建日程、搜索/修改/删除已有日程、看某天的安排、切视图或看课程表时使用。典型场景：把课表或会议写进日历、查询某天日程、补建一次性提醒、改一条日程的时间。触发词：加日程、写进日历、安排提醒、查日历、明天有什么安排、课程表。 不适用：把教务课表批量同步进日历课程表（用 campus-schedule-sync）；结合课表与天气排一天行程（用 weather-trip-planning）；读系统日历数据库（那是 lw_calendar 工具，不是本技能）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "tap_by_text",
+        "tap_coord",
+        "type",
+        "swipe",
+        "system_key",
+        "launch_app"
+      ],
+      "danger_steps": [
+        "删除日程",
+        "修改主人已有的日程",
+        "日程导入与管理"
+      ],
+      "path": "skills/android-vivo-calendar/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-calendar/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-calendar/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-calendar/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-calendar/SKILL.md"
+      ],
+      "sha256": "sha256:f66faaefa9b9a9da55c557d9e782964b162c037ace0297c6e07f3a9285fecbbd",
+      "size": 11894
+    },
+    {
+      "id": "android-vivo-camera",
+      "name": "相机",
+      "package": "com.android.camera",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": [
+        "camera",
+        "photo"
+      ],
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
+      "status": "verified",
+      "risk": "low",
+      "author": "yuloong07-star",
+      "description": "在 vivo 相机（com.android.camera）里拍照、录像、切模式、切前后摄、调变焦/闪光灯/画幅/倒计时，或改相机设置时使用。典型场景：拍下眼前的东西、录一段视频、切前置、调画幅与倒计时。触发词：拍照、拍一下、录像、前置、变焦、画幅、倒计时、相机设置。 不适用：识别镜头前是什么（用 lw_look 或视频模式，不必开相机应用）；对已拍照片做编辑（用 dsh-imagegen-edit）；找相册里的照片（用 android-vivo-gallery）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr",
+        "tap_by_text",
+        "tap_coord",
+        "swipe",
+        "system_key",
+        "launch_app"
+      ],
+      "danger_steps": [],
+      "path": "skills/android-vivo-camera/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-camera/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-camera/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-camera/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-camera/SKILL.md"
+      ],
+      "sha256": "sha256:526614014dd073638ca2c720d648597bf26b97590c62c15cce0f25fd68a74bf4",
+      "size": 10090
+    },
+    {
+      "id": "android-vivo-clock",
+      "name": "闹钟时钟",
+      "package": "com.android.BBKClock",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": [
+        "clock",
+        "alarm"
+      ],
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
+      "status": "verified",
+      "risk": "medium",
+      "author": "yuloong07-star",
+      "description": "在 vivo 闹钟时钟（com.android.BBKClock）里查看/新建/启停闹钟、看某个时区的当前时间、操作秒表与计时器时使用。典型场景：明早几点叫我、把 6 点的闹钟关掉、看现在纽约几点、帮我计个时。触发词：闹钟、叫我起床、定个提醒、世界时钟、计时器、秒表。 不适用：只想用一句自然语言让系统助手顺手设个闹钟（用 android-vivo-copilot 一步到位）；想按日期提醒某件事（用 android-vivo-calendar 建日程）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "tap_by_text",
+        "tap_coord",
+        "type",
+        "swipe",
+        "system_key",
+        "launch_app"
+      ],
+      "danger_steps": [
+        "关闭/删除主人的闹钟",
+        "修改既有闹钟时间",
+        "启用起床闹钟"
+      ],
+      "path": "skills/android-vivo-clock/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-clock/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-clock/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-clock/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-clock/SKILL.md"
+      ],
+      "sha256": "sha256:0bb986a329e9e25deb2a81358443a179ad001d23dfe9653ca43359f73d983494",
+      "size": 10002
+    },
+    {
+      "id": "android-vivo-copilot",
+      "name": "蓝心小V",
+      "package": "com.vivo.ai.copilot",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": [
+        "assistant",
+        "ai"
+      ],
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
+      "status": "verified",
+      "risk": "medium",
+      "author": "yuloong07-star",
+      "description": "用蓝心小V（com.vivo.ai.copilot）以文字下系统指令、问手机操作问题、让它代做设置类任务或找智能体时使用。典型场景：设闹钟/开热点/调亮度这类系统设置交给他办、问「怎么清后台」、看有哪些智能体。触发词：蓝心小V、问小V、让小V设闹钟、系统助手、智能体广场、深度研究。 不适用：Agent 自己用 lw_* 工具就能一遍做完的操作（绕道小V更慢且结果要再验证）；账号、支付、验证码类指令（一律不代发）；只是想设个闹钟/日程（直接用 android-vivo-clock / android-vivo-calendar 更可控）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr",
+        "tap_by_text",
+        "tap_coord",
+        "type",
+        "system_key",
+        "launch_app"
+      ],
+      "danger_steps": [
+        "让小V代执行系统设置变更",
+        "代发账号与支付类指令"
+      ],
+      "path": "skills/android-vivo-copilot/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-copilot/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-copilot/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-copilot/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-copilot/SKILL.md"
+      ],
+      "sha256": "sha256:e34b537ba5c04ec340a2eedc445bd8dfaab43bc5626662a12d473c3b5c67ac78",
+      "size": 9361
     },
     {
       "id": "android-vivo-filemanager",
@@ -188,40 +254,72 @@
       "status": "verified",
       "risk": "medium",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-filemanager/SKILL.md"
+      "description": "在 vivo 文件管理（com.android.filemanager）里按分类找文件、搜索文件名、看存储占用、进具体目录、找最近删除时使用。典型场景：找下载的安装包、看还剩多少空间、找被删的文件、确认某个文件在哪。触发词：文件管理、找文件、下载目录、存储空间、最近删除。 不适用：Agent 用 read / glob / bash 就能直接读写或列出的路径（自己处理即可）；删除文件与空间清理（不可逆，只指路）；只想知道剩余空间（用 lw_storage 更快）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "tap_by_text",
+        "tap_coord",
+        "type",
+        "swipe",
+        "system_key",
+        "launch_app"
+      ],
+      "danger_steps": [
+        "删除文件",
+        "清空最近删除",
+        "空间清理"
+      ],
+      "path": "skills/android-vivo-filemanager/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-filemanager/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-filemanager/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-filemanager/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-filemanager/SKILL.md"
+      ],
+      "sha256": "sha256:29abe9bc5fb369445bf7dbee549ae1593b6f866a9dbed1cbb950515feff5f0fd",
+      "size": 10122
     },
     {
-      "id": "android-vivo-phone",
-      "name": "电话与联系人",
-      "package": "com.android.contacts",
+      "id": "android-vivo-gallery",
+      "name": "相册",
+      "package": "com.vivo.gallery",
       "platform": "android",
       "vendor": "vivo",
       "tags": [
-        "phone",
-        "contacts"
+        "gallery",
+        "photos"
       ],
-      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
-      "verified": "2026-10-10",
+      "version_tested": "vivo V2417A / Android 16",
+      "verified": "2026-10-11",
       "status": "verified",
-      "risk": "high",
-      "author": "yuloong07-star",
-      "path": "skills/android-vivo-phone/SKILL.md"
-    },
-    {
-      "id": "android-vivo-appstore",
-      "name": "应用商店",
-      "package": "com.bbk.appstore",
-      "platform": "android",
-      "vendor": "vivo",
-      "tags": [
-        "appstore"
-      ],
-      "version_tested": "未记录",
-      "verified": "未验证",
-      "status": "draft",
       "risk": "medium",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-appstore/SKILL.md"
+      "description": "在 vivo 相册（com.vivo.gallery）里浏览照片、进某个相册、看单张照片的信息或工具栏、找回收站（最近删除）时使用。典型场景：找某张截图、看某个相册有多少张、把删掉的照片找回来、看照片的拍摄信息。触发词：相册、找照片、翻相册、最近删除、回收站、这张照片的信息。 不适用：改图修图抠图去水印（用 dsh-imagegen-edit）；只想看屏幕上现在是什么（用屏幕截图工具，不进相册）；清理建议与一键清理（不可逆，只指路）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr",
+        "tap_by_text",
+        "tap_coord",
+        "swipe",
+        "scroll",
+        "launch_app"
+      ],
+      "danger_steps": [
+        "删除照片/视频",
+        "清空最近删除",
+        "清理建议"
+      ],
+      "path": "skills/android-vivo-gallery/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-gallery/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-gallery/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-gallery/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-gallery/SKILL.md"
+      ],
+      "sha256": "sha256:62b850e58ad975da482d4d7943ae2d1d9adaef96833cc9cee0adb299ca034fed",
+      "size": 12316
     },
     {
       "id": "android-vivo-manager",
@@ -238,24 +336,26 @@
       "status": "draft",
       "risk": "high",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-manager/SKILL.md"
-    },
-    {
-      "id": "android-vivo-theme",
-      "name": "主题",
-      "package": "com.bbk.theme",
-      "platform": "android",
-      "vendor": "vivo",
-      "tags": [
-        "theme",
-        "wallpaper"
+      "description": "在 vivo 手机管家（com.iqoo.secure）里体检、清理空间、查权限与安全设置时使用。触发词：手机管家、清理垃圾、杀毒、权限管理、省电。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr"
       ],
-      "version_tested": "未记录",
-      "verified": "未验证",
-      "status": "draft",
-      "risk": "low",
-      "author": "yuloong07-star",
-      "path": "skills/android-vivo-theme/SKILL.md"
+      "danger_steps": [
+        "一键清理",
+        "卸载应用",
+        "限制后台"
+      ],
+      "path": "skills/android-vivo-manager/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-manager/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-manager/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-manager/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-manager/SKILL.md"
+      ],
+      "sha256": "sha256:381fcb9bbe81c710015a265290870bbfc53ac2d19bba8f8bf1803fdac44768b6",
+      "size": 1276
     },
     {
       "id": "android-vivo-music",
@@ -272,24 +372,141 @@
       "status": "draft",
       "risk": "low",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-music/SKILL.md"
+      "description": "在 vivo 音乐（com.android.bbkmusic）里播放本地歌曲、搜索在线歌曲、建歌单时使用。触发词：音乐、放首歌、听歌、歌单。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr"
+      ],
+      "danger_steps": [
+        "付费/会员开通"
+      ],
+      "path": "skills/android-vivo-music/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-music/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-music/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-music/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-music/SKILL.md"
+      ],
+      "sha256": "sha256:9b5e0d963eaddd0c9d90ba095fd3fc6fd0cb727aa01e4082e706de1e86fed61c",
+      "size": 1160
     },
     {
-      "id": "android-vivo-video",
-      "name": "视频",
-      "package": "com.android.VideoPlayer",
+      "id": "android-vivo-notes",
+      "name": "原子笔记",
+      "package": "com.android.notes",
       "platform": "android",
       "vendor": "vivo",
       "tags": [
-        "video",
-        "media"
+        "notes",
+        "productivity"
       ],
-      "version_tested": "未记录",
-      "verified": "未验证",
-      "status": "draft",
-      "risk": "low",
+      "version_tested": "5.4.5.107（vivo V2417A / Android 16）",
+      "verified": "2026-10-11",
+      "status": "verified",
+      "risk": "medium",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-video/SKILL.md"
+      "description": "在 vivo 原子笔记（com.android.notes）里新建/追加/查找笔记、管理待办与文档、建文件夹或找回最近删除时使用。典型场景：把整理好的长文存进指定笔记、每日往同一笔记追加一行、在文件夹间归档、勾掉一条待办。触发词：记笔记、存进笔记、原子笔记、往笔记里加一段、建文件夹、新建待办、笔记里的文档。 不适用：往「健康日报」那类有专门流程的单篇笔记里写数据（用 health-daily-report）；需要账号协作的云笔记（本机没有）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr",
+        "tap_by_text",
+        "tap_coord",
+        "type",
+        "swipe",
+        "system_key",
+        "launch_app"
+      ],
+      "danger_steps": [
+        "删除笔记/待办/文档",
+        "清空最近删除",
+        "移入原子隐私系统",
+        "加锁"
+      ],
+      "path": "skills/android-vivo-notes/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-notes/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-notes/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-notes/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-notes/SKILL.md"
+      ],
+      "sha256": "sha256:d4ddf8b0c83045fa22aabfe3ffd420dfb8b7fff03a2503a31431d971d53aeea3",
+      "size": 21549
+    },
+    {
+      "id": "android-vivo-phone",
+      "name": "电话与联系人",
+      "package": "com.android.contacts",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": [
+        "phone",
+        "contacts"
+      ],
+      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
+      "verified": "2026-10-10",
+      "status": "verified",
+      "risk": "high",
+      "author": "yuloong07-star",
+      "description": "在 vivo 电话与联系人（com.android.contacts）里打开拨号盘、查通话记录、查联系人或拨号时使用。典型场景：给某人打电话、看未接来电、找某个联系人的号码。触发词：打电话、拨号、通话记录、未接来电、联系人、号码。 不适用：发短信或社交软件消息（本机无对应技能）；回拨陌生、催收、验证码类来电（一律交回用户）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "tap_by_text",
+        "tap_coord",
+        "type"
+      ],
+      "danger_steps": [
+        "拨号呼出",
+        "删除通话记录",
+        "删除联系人"
+      ],
+      "path": "skills/android-vivo-phone/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-phone/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-phone/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-phone/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-phone/SKILL.md"
+      ],
+      "sha256": "sha256:628a7c369e60c0bfddf1050f399c2ba34932a638292bccde2312e73ac9fdcac8",
+      "size": 4727
+    },
+    {
+      "id": "android-vivo-recorder",
+      "name": "录音机",
+      "package": "com.android.bbksoundrecorder",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": [
+        "tools",
+        "recorder"
+      ],
+      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
+      "verified": "2026-10-10",
+      "status": "verified",
+      "risk": "medium",
+      "author": "yuloong07-star",
+      "description": "在 vivo 录音机（com.android.bbksoundrecorder）里开始/停止录音、查找与播放既有录音、看电话或应用通话录音时使用。典型场景：录一段语音、找上次的录音、听某段录音。触发词：录音机、录一段、录音、通话录音。 不适用：把一段录音转成文字（本机没有可靠的离线转写链路，别承诺）；长时间录音笔类记录管理。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "tap_by_text",
+        "tap_coord"
+      ],
+      "danger_steps": [
+        "删除录音",
+        "开启应用通话录音"
+      ],
+      "path": "skills/android-vivo-recorder/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-recorder/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-recorder/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-recorder/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-recorder/SKILL.md"
+      ],
+      "sha256": "sha256:db2108e34cbf87617011301fb73055d8954468e57e2bc7c978f64bbecee9a0a1",
+      "size": 4044
     },
     {
       "id": "android-vivo-scan",
@@ -306,7 +523,100 @@
       "status": "draft",
       "risk": "medium",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-scan/SKILL.md"
+      "description": "在 vivo 扫描（com.vivo.vtouch）里扫二维码、条形码、识文字或扫文档时使用。触发词：扫一扫、扫码、扫描二维码、文字识别。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr"
+      ],
+      "danger_steps": [
+        "扫码后跳转的支付/授权确认"
+      ],
+      "path": "skills/android-vivo-scan/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-scan/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-scan/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-scan/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-scan/SKILL.md"
+      ],
+      "sha256": "sha256:b742fc41801b4ca10e270554b120671ac325cf74a7e59f881e45075d5167e9a3",
+      "size": 1290
+    },
+    {
+      "id": "android-vivo-settings",
+      "name": "设置",
+      "package": "com.android.settings",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": [
+        "system",
+        "settings"
+      ],
+      "version_tested": "Android 16（vivo V2417A）",
+      "verified": "2026-10-11",
+      "status": "verified",
+      "risk": "medium",
+      "author": "yuloong07-star",
+      "description": "在 vivo 系统设置（com.android.settings）里查询与修改系统开关、找某个设置项在哪、进二级设置页时使用。典型场景：查/开蓝牙、看还剩多少存储、找某个开关藏在哪一页。触发词：设置、开蓝牙、飞行模式、系统设置、存储还剩多少、设置项在哪。 不适用：亮度、屏幕超时、自动旋转、字体大小这类本机有 lw_system / lw_net 能直接读写的（不必进设置页）；恢复出厂、清数据、改锁屏密码、账户解绑（只报入口路径，不代点）；某个应用自己的设置（进那个应用）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "tap_by_text",
+        "tap_coord",
+        "type",
+        "swipe",
+        "system_key",
+        "launch_app"
+      ],
+      "danger_steps": [
+        "恢复出厂/清除数据",
+        "卸载或停用应用",
+        "改锁屏密码与指纹、账户解绑",
+        "空间清理"
+      ],
+      "path": "skills/android-vivo-settings/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-settings/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-settings/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-settings/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-settings/SKILL.md"
+      ],
+      "sha256": "sha256:9b054d4e228041e0a4e39fadce63da5cb2fe2c6f718baa79a075ea36f57a440a",
+      "size": 11627
+    },
+    {
+      "id": "android-vivo-theme",
+      "name": "主题",
+      "package": "com.bbk.theme",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": [
+        "theme",
+        "wallpaper"
+      ],
+      "version_tested": "未记录",
+      "verified": "未验证",
+      "status": "draft",
+      "risk": "low",
+      "author": "yuloong07-star",
+      "description": "在 vivo 主题（com.bbk.theme）里更换壁纸、主题、字体与息屏样式时使用。触发词：主题、换壁纸、换字体、息屏显示。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr"
+      ],
+      "danger_steps": [
+        "付费主题购买"
+      ],
+      "path": "skills/android-vivo-theme/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-theme/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-theme/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-theme/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-theme/SKILL.md"
+      ],
+      "sha256": "sha256:280b1399910d8f608425067dbf74579800ef335d7d43c4239b68d24062bc4d6d",
+      "size": 1161
     },
     {
       "id": "android-vivo-translator",
@@ -323,7 +633,54 @@
       "status": "draft",
       "risk": "low",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-translator/SKILL.md"
+      "description": "在 vivo 翻译机（com.vivo.translator）里做文本翻译、语音翻译或拍照翻译时使用。触发词：翻译、翻成英文、听译、拍照翻译。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr"
+      ],
+      "danger_steps": [],
+      "path": "skills/android-vivo-translator/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-translator/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-translator/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-translator/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-translator/SKILL.md"
+      ],
+      "sha256": "sha256:24178c954e691cf6752f6c6695e782e40559b3d4c9f6db02297d058af664e4db",
+      "size": 1162
+    },
+    {
+      "id": "android-vivo-video",
+      "name": "视频",
+      "package": "com.android.VideoPlayer",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": [
+        "video",
+        "media"
+      ],
+      "version_tested": "未记录",
+      "verified": "未验证",
+      "status": "draft",
+      "risk": "low",
+      "author": "yuloong07-star",
+      "description": "在 vivo 视频（com.android.VideoPlayer）里播放本地视频、管理下载与观看记录时使用。触发词：视频、播放视频、看录屏、本地视频。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr"
+      ],
+      "danger_steps": [],
+      "path": "skills/android-vivo-video/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-video/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-video/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-video/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-video/SKILL.md"
+      ],
+      "sha256": "sha256:fc20c3b324e4c9f70db4152a15b7fee25b2459fa3e20bd1661b09e6a57e86219",
+      "size": 1174
     },
     {
       "id": "android-vivo-wallet",
@@ -340,7 +697,59 @@
       "status": "draft",
       "risk": "high",
       "author": "yuloong07-star",
-      "path": "skills/android-vivo-wallet/SKILL.md"
+      "description": "在 vivo 钱包（com.vivo.wallet）里查看交通卡、门禁卡、余额与优惠券时使用。触发词：钱包、交通卡、NFC刷卡、门禁卡、公交卡余额。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "ocr"
+      ],
+      "danger_steps": [
+        "充值",
+        "开通新卡",
+        "绑定银行卡"
+      ],
+      "path": "skills/android-vivo-wallet/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-wallet/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-wallet/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-wallet/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-wallet/SKILL.md"
+      ],
+      "sha256": "sha256:e6ff8f9757de158f51b16c06370f715b071ff41cc2bf56df77f7283c6d4dea79",
+      "size": 1404
+    },
+    {
+      "id": "android-vivo-weather",
+      "name": "天气",
+      "package": "com.vivo.weather",
+      "platform": "android",
+      "vendor": "vivo",
+      "tags": [
+        "weather",
+        "life"
+      ],
+      "version_tested": "未记录（vivo V2417A / Android 16 ROM）",
+      "verified": "2026-10-10",
+      "status": "verified",
+      "risk": "low",
+      "author": "yuloong07-star",
+      "description": "用 vivo 天气（com.vivo.weather）读当前天气、未来多日预报、空气质量与生活指数，或切换城市查看时使用。典型场景：今天穿什么、明天有没有雨、南京空气怎么样。触发词：天气、气温、下雨吗、穿什么、空气质量、未来几天。 不适用：要历史天气或分钟级降水精度（走 web 数据源）；把天气与课表结合起来排行程（用 weather-trip-planning）。",
+      "tools_used": [
+        "ui_tree",
+        "screenshot",
+        "swipe"
+      ],
+      "danger_steps": [],
+      "path": "skills/android-vivo-weather/SKILL.md",
+      "url": "https://cdn.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-weather/SKILL.md",
+      "mirrors": [
+        "https://fastly.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-weather/SKILL.md",
+        "https://gcore.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-weather/SKILL.md",
+        "https://testingcf.jsdelivr.net/gh/yuloong07-star/app-skills@index-1/skills/android-vivo-weather/SKILL.md"
+      ],
+      "sha256": "sha256:21d30286eda87d32d29a2f64e829f288fc51e6f79cd6eac16681f152847f4961",
+      "size": 4202
     }
-  ]
+  ],
+  "deprecated": []
 }
